@@ -1,0 +1,445 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity"
+    android:keepScreenOn="true"
+    >
+
+    <FrameLayout
+
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/frameLayout">
+
+    <com.example.emotiondetectionv1.CameraSourcePreview
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/camera_preview"
+        >
+
+        <ProgressBar
+            android:id="@+id/progressBar"
+            style="@style/Widget.AppCompat.ProgressBar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:visibility="invisible" />
+    </com.example.emotiondetectionv1.CameraSourcePreview>
+
+        <ImageView
+            android:layout_width="80dp"
+            android:id="@+id/switchCamera"
+            android:layout_height="70dp"
+            android:layout_gravity="bottom|end"
+            android:src="@drawable/switch_camera_icon" />
+    </FrameLayout>
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+        <TableLayout android:layout_height="wrap_content"
+            android:layout_width="wrap_content"
+            >
+            <TableRow>
+
+                <TextView
+                    android:layout_width="105dp"
+                    android:layout_height="match_parent"
+                    android:text="Face detected"
+                    android:textColor="@android:color/white"
+                    />
+                <TextView android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/faceDetected"
+
+                    android:textColor="@android:color/white"
+
+                    />
+            </TableRow>
+            <!--<TableRow>
+
+                <TextView
+                    android:layout_width="80dp"
+                    android:layout_height="match_parent"
+                    android:text="Glasses"
+                    android:textColor="@android:color/white"
+                    />
+                <TextView android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/glasses"
+
+                    android:textColor="@android:color/white"
+
+                    />
+            </TableRow>
+
+            <TableRow>
+
+                <TextView
+                    android:layout_width="80dp"
+                    android:layout_height="match_parent"
+                    android:text="Age"
+                    android:textColor="@android:color/white"
+                    />
+                <TextView android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/age"
+
+                    android:textColor="@android:color/white"
+
+                    />
+            </TableRow>
+            <TableRow>
+
+                <TextView
+                    android:layout_width="80dp"
+                    android:layout_height="match_parent"
+                    android:text="Ethnicity"
+                    android:textColor="@android:color/white"
+                    />
+                <TextView android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/ethnicity"
+
+                    android:textColor="@android:color/white"
+
+                    />
+            </TableRow>-->
+            <TableRow>
+
+                <TextView
+                    android:layout_width="80dp"
+                    android:layout_height="match_parent"
+                    android:text="Smile"
+                    android:textColor="@android:color/white"
+                    />
+                <TextView android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/smile"
+
+                    android:textColor="@android:color/white"
+
+                    />
+            </TableRow>
+            <TableRow>
+                <TextView android:layout_width="90dp"
+                    android:layout_height="wrap_content"
+                    android:text="Attention"
+                    android:textColor="@android:color/white"
+                    />
+                <TextView android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/attention"
+                    android:textColor="@android:color/white"/>
+            </TableRow>
+            <TableRow>
+                <TextView android:layout_width="90dp"
+                    android:layout_height="wrap_content"
+                    android:text="Anger"
+                    android:textColor="@android:color/white"
+                    />
+                <TextView android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/anger"
+                    android:textColor="@android:color/white"/>
+            </TableRow>
+            <TableRow>
+                <TextView android:layout_width="90dp"
+                    android:layout_height="wrap_content"
+                    android:text="Contempt"
+                    android:textColor="@android:color/white"
+                    />
+                <TextView android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/contempt"
+                    android:textColor="@android:color/white"/>
+            </TableRow>
+            <TableRow>
+                <TextView android:layout_width="90dp"
+                    android:layout_height="wrap_content"
+                    android:text="Disgust"
+                    android:textColor="@android:color/white"
+                    />
+                <TextView android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/disgust"
+                    android:textColor="@android:color/white"/>
+            </TableRow>
+            <TableRow>
+                <TextView android:layout_width="90dp"
+                    android:layout_height="wrap_content"
+                    android:text="Engagement"
+                    android:textColor="@android:color/white"
+                    />
+                <TextView android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/engagement"
+                    android:textColor="@android:color/white"/>
+            </TableRow>
+            <TableRow>
+                <TextView android:layout_width="90dp"
+                    android:layout_height="wrap_content"
+                    android:text="Fear"
+                    android:textColor="@android:color/white"
+                    />
+                <TextView android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/fear"
+                    android:textColor="@android:color/white"/>
+            </TableRow>
+            <TableRow>
+                <TextView android:layout_width="90dp"
+                    android:layout_height="wrap_content"
+                    android:text="Joy"
+                    android:textColor="@android:color/white"
+                    />
+                <TextView android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/joy"
+                    android:textColor="@android:color/white"/>
+            </TableRow>
+           <!-- <TableRow>
+                <TextView android:layout_width="90dp"
+                    android:layout_height="wrap_content"
+                    android:text="Brow Furrow"
+                    android:textColor="@android:color/white"
+                    />
+                <TextView android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/browFurrow"
+                    android:textColor="@android:color/white"/>
+            </TableRow>-->
+            <TableRow>
+                <TextView android:layout_width="90dp"
+                    android:layout_height="wrap_content"
+                    android:text="Sadness"
+                    android:textColor="@android:color/white"
+                    />
+                <TextView android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/sadness"
+                    android:textColor="@android:color/white"/>
+            </TableRow>
+            <TableRow>
+                <TextView android:layout_width="90dp"
+                    android:layout_height="wrap_content"
+                    android:text="Surprise"
+                    android:textColor="@android:color/white"
+                    />
+                <TextView android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/surprise"
+                    android:textColor="@android:color/white"/>
+            </TableRow>
+            <!--<TableRow>
+                <TextView android:layout_width="90dp"
+                    android:layout_height="wrap_content"
+                    android:text="Brow Raise"
+                    android:textColor="@android:color/white"
+                    />
+                <TextView android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/browRaise"
+                    android:textColor="@android:color/white"/>
+            </TableRow>
+            <TableRow>
+                <TextView android:layout_width="90dp"
+                    android:layout_height="wrap_content"
+                    android:text="Cheek Raise"
+                    android:textColor="@android:color/white"
+                    />
+                <TextView android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/cheekRaise"
+                    android:textColor="@android:color/white"/>
+            </TableRow>
+            <TableRow>
+                <TextView android:layout_width="90dp"
+                    android:layout_height="wrap_content"
+                    android:text="Chin Raise"
+                    android:textColor="@android:color/white"
+                    />
+                <TextView android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/chinRaise"
+                    android:textColor="@android:color/white"/>
+            </TableRow>
+            <TableRow>
+                <TextView android:layout_width="90dp"
+                    android:layout_height="wrap_content"
+                    android:text="Dimpler"
+                    android:textColor="@android:color/white"
+                    />
+                <TextView android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/dimpler"
+                    android:textColor="@android:color/white"/>
+            </TableRow>-->
+            <TableRow>
+                <TextView android:layout_width="90dp"
+                    android:layout_height="wrap_content"
+                    android:text="Eye closure"
+                    android:textColor="@android:color/white"
+                    />
+                <TextView android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/eyeClosure"
+                    android:textColor="@android:color/white"/>
+            </TableRow>
+            <TableRow>
+                <TextView android:layout_width="90dp"
+                    android:layout_height="wrap_content"
+                    android:text="Eye widen"
+                    android:textColor="@android:color/white"
+                    />
+                <TextView android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/eyeWiden"
+                    android:textColor="@android:color/white"/>
+            </TableRow>
+            <!--<TableRow>
+                <TextView android:layout_width="90dp"
+                    android:layout_height="wrap_content"
+                    android:text="Inner brow raise"
+                    android:textColor="@android:color/white"
+                    />
+                <TextView android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/innerBrowRaise"
+                    android:textColor="@android:color/white"/>
+            </TableRow>-->
+            <TableRow>
+                <TextView android:layout_width="90dp"
+                    android:layout_height="wrap_content"
+                    android:text="Jaw drop"
+                    android:textColor="@android:color/white"
+                    />
+                <TextView android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/jawDrop"
+                    android:textColor="@android:color/white"/>
+            </TableRow>
+            <!--<TableRow>
+                <TextView android:layout_width="90dp"
+                    android:layout_height="wrap_content"
+                    android:text="Lid tighten"
+                    android:textColor="@android:color/white"
+                    />
+                <TextView android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/lidTighten"
+                    android:textColor="@android:color/white"/>
+            </TableRow>
+            <TableRow>
+                <TextView android:layout_width="90dp"
+                    android:layout_height="wrap_content"
+                    android:text="Lip corner depressor"
+                    android:textColor="@android:color/white"
+                    />
+                <TextView android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/lipCornerDepressor"
+                    android:textColor="@android:color/white"/>
+            </TableRow>
+            <TableRow>
+                <TextView android:layout_width="90dp"
+                    android:layout_height="wrap_content"
+                    android:text="Lip press"
+                    android:textColor="@android:color/white"
+                    />
+                <TextView android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/lipPress"
+                    android:textColor="@android:color/white"/>
+            </TableRow>
+            <TableRow>
+                <TextView android:layout_width="90dp"
+                    android:layout_height="wrap_content"
+                    android:text="Lip stretch"
+                    android:textColor="@android:color/white"
+                    />
+                <TextView android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/lipStretch"
+                    android:textColor="@android:color/white"/>
+            </TableRow>
+            <TableRow>
+                <TextView android:layout_width="90dp"
+                    android:layout_height="wrap_content"
+                    android:text="Lip suck"
+                    android:textColor="@android:color/white"
+                    />
+                <TextView android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/lipSuck"
+                    android:textColor="@android:color/white"/>
+            </TableRow>-->
+            <!--<TableRow>
+                <TextView android:layout_width="90dp"
+                    android:layout_height="wrap_content"
+                    android:text="Mouth open"
+                    android:textColor="@android:color/white"
+                    />
+                <TextView android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/mouthOpen"
+                    android:textColor="@android:color/white"/>
+            </TableRow>
+            <TableRow>
+                <TextView android:layout_width="90dp"
+                    android:layout_height="wrap_content"
+                    android:text="Nose Wrinkle"
+                    android:textColor="@android:color/white"
+                    />
+                <TextView android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/noseWrinkle"
+                    android:textColor="@android:color/white"/>
+            </TableRow>
+            <TableRow>
+                <TextView android:layout_width="90dp"
+                    android:layout_height="wrap_content"
+                    android:text="Smirk"
+                    android:textColor="@android:color/white"
+                    />
+                <TextView android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/smirk"
+                    android:textColor="@android:color/white"/>
+            </TableRow>
+            <TableRow>
+                <TextView android:layout_width="90dp"
+                    android:layout_height="wrap_content"
+                    android:text="Upper Lip raise"
+                    android:textColor="@android:color/white"
+                    />
+                <TextView android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/upperLipRaise"
+                    android:textColor="@android:color/white"/>
+            </TableRow>-->
+        </TableLayout>
+    </RelativeLayout>
+   <RelativeLayout
+       android:layout_width="match_parent"
+       android:layout_height="wrap_content"
+       android:layout_alignParentBottom="true"
+       android:layout_centerHorizontal="true"
+       android:orientation="horizontal"
+       android:gravity="center"
+       android:layout_centerInParent="true"
+       >
+       <Button
+           android:id="@+id/startButton"
+           android:layout_width="wrap_content"
+           android:layout_height="wrap_content"
+           android:gravity="center_vertical"
+           android:layout_gravity="center_vertical"
+           android:text="Start Analyzing"
+           android:layout_centerInParent="true"
+           android:layout_marginBottom="25dp"
+           />
+   </RelativeLayout>
+
+</RelativeLayout>

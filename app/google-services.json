@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "33637189636",
+    "firebase_url": "https://emotion-detection-a8549.firebaseio.com",
+    "project_id": "emotion-detection-a8549",
+    "storage_bucket": "emotion-detection-a8549.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:33637189636:android:7d8824b7afcae0563d0d51",
+        "android_client_info": {
+          "package_name": "com.example.emotiondetectionv1"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "33637189636-9lpqr53hh3kc7pcad68s1kdnqij7cpqg.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAwRHuIqusStEn6QGnqSpWfarxmwq1AHnw"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "33637189636-9lpqr53hh3kc7pcad68s1kdnqij7cpqg.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
